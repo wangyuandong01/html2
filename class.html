@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class People {
+        constructor(name,age){
+            this.name=name;
+            this.age=age;
+        }
+     showName(){
+            console.log("我的名字"+this.name)
+     }
+    }
+    var p1 = new People('zhangsan',18);
+    p1.showName();
+    class Cm extends People{
+        constructor(name,age,company){
+         super(name,age);
+         this.company=company;
+        }
+        showCompany(){
+            console.log('项目');
+        }
+    }
+    let  c1 = new Cm('wangmeng',22,'ali');
+    console.log(c1.name);
+    c1.showCompany();
+</script>
+</body>
+</html>
