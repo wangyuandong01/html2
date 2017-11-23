@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function Animal(name) {
+        this.name = name;
+
+    }
+    Animal.prototype.eat = function () {
+
+    };
+    function Cat() {
+        Animal.call(this);
+    }
+    //Cat.prototype = new Animal();
+    function inhert(o) {
+        function F() {}
+        F.prototype=o;
+        return new F();
+    }
+    Cat.prototype = inhert(Animal.prototype);
+    Cat.prototype.constructor=Cat;
+    
+    Cat.prototype.constructor  = Cat;//原型里只有一个属性，只有constructor
+    var cat1 = new Cat('mimi');
+   console.log(cat1.constructor)
+</script>
+</body>
+</html>

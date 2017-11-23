@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">click me</button>
+<script>
+//function text() {
+//    alert ('ahah')
+//}
+//text.call({name:'lisi'},'wangwu',33);//第一个参数改变this指针
+//text.apply({name:'lisi'},['wangwu',33]);//最多俩参数，第二个为数组
+//场景，事件绑丢
+
+//var obj = {};
+//obj.call();//函数下有call，普通对象没有
+//function text() {
+//    //arguments类数组,里面为传过来的形参
+////    console.log(arguments);
+//    text2.apply(null,arguments);
+//}
+//function text2(a,b,c) {
+// console.log(n);//->[1,2,3]
+//}
+//text(1,2,3)
+    var oBtn =document.getElementById('btn');
+    oBtn.onclick = function () {
+        //console.log(this);//->oBtn
+        //var that = this;
+        var fn = obj.sayHello = function () {
+            console.log(this);
+        }
+        var obj = {
+            sayHello:function () {
+                console.log(this);
+            }
+        };
+        setTimeout(obj.sayHello,2000);//要加括号调用
+
+    }
+</script>
+</body>
+</html>

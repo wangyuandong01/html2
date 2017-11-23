@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   // function Person(name,age) {
+//        this.name = name;
+//        this.age = age;
+       // console.log(this)
+      //  return  this;
+    }
+//    var p1 = new  Person('lisi',23);
+//    console.log(p1)
+  //  new Person();
+// var p1 =new Person();
+    var o = new Object();
+    var o2={name:'lisi'};//duixiangzhijieliang
+    var  o3 = {name:'lisi'}
+    //Object.prototypex
+    function Person() {
+
+    }
+    var p1 = new Person();
+    p1 -> Person.prototype;->Object.prototype;//这就是原型链
+    var o4= new Object();
+    o4 -> Object.prototype;
+    var arr = new Array();
+    arr->Array.prototype ->Object.prototype;
+    //new谁，就写谁
+    //只要是对象都有原型，除了Object 因为是最顶层的了
+
+</script>
+</body>
+</html>
