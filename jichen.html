@@ -25,7 +25,7 @@
     }
     Cat.prototype = inhert(Animal.prototype);
     Cat.prototype.constructor=Cat;
-    
+
     Cat.prototype.constructor  = Cat;//原型里只有一个属性，只有constructor
     var cat1 = new Cat('mimi');
    console.log(cat1.constructor)

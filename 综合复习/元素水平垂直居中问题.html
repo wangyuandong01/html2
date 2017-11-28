@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding:0;
+    }
+    #div1{
+        width: 200px;
+        height: 200px;
+        background: #cccccc;
+        //内容居中
+        text-align: center;
+        line-height: 200px;
+    }
+    #div2{
+        width: 500px;
+        background: #ff0000;
+        margin: 0 auto;//水平居中
+    }
+    #div3{
+        width: 300px;
+        height: 200px;
+        background: #0000ff;
+        float: left;
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
+        top: 50%;
+        margin-top: -100px;
+
+
+    }
+    #div4{
+        width:30%;
+        height:20%;
+        background: #ff00ff;
+        position: absolute;
+        left:50%;
+        margin-left:-15%;
+        top:50%;
+        margin-top: -10%;
+          }
+</style>
+<body>
+<div id="div1">
+    <span>hehe</span>
+</div>
+<div id="div2">
+    <span>haha</span>
+</div>
+<div id="div3">hooh</div>
+<div id="div4">xixi</div>
+</body>
+</html>
+<!--1：将内容水平居中用 text-align:center
+竖直居中 line-height:等于高的值
+2：将div水平居中margin: 0 auto
+3:先左浮，绝对定位left:50% margin-left:-宽的一半，
+top:50% margin-top:-高度的一半
+4.宽度和高度用百分比表示，
+绝对定位，left:50%,top:50%
+margin-left:-宽一半的百分比
+margin-top：-高一半的百分比-->

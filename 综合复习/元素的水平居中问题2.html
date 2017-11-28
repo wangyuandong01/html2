@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding: 0;
+    }
+    #div1{
+        width:800px;
+        height: 400px;
+        background: #cccccc;
+        position: relative;
+    }
+    #div1 h1{
+        background: #ff0000;
+        width:200px;
+        height:100px;
+        text-align: center;
+        line-height:100px;
+    }
+    #div2{
+        width: 400px;
+        height: 100px;
+        background: #0f0;
+        position: absolute;
+        left:50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        line-height:100px;
+    }
+</style>
+<body>
+<div id="div1">
+    <h1>hehe</h1>
+    <div id="div2">hoho</div>
+</div>
+</body>
+</html>
+<!--定位：
+在父元素相对定位
+在子元素绝对定位（脱离文档流）
+居中
+左：50%，上：50%
+transform: translate(-50%,-50%);-->
