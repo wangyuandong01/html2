@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="ul1">
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+</ul>
+<button id="btn">click</button>
+<script>
+//    function out() {
+//     var a =5;
+//     function inner() {
+//         return a;
+//     }
+//     return inner;
+//    }
+//    var fn = out();
+//    console.log(fn())
+//(function outer() {
+//    var a=5;
+//    function inner() {
+//        return a;
+//    }
+//    console.log( inner());
+//})();
+    var ou1 =document.getElementById('ul1');
+    var ali =document.getElementsByTagName('li');
+for(var i=0; i<ali.length;i++)
+{
+    (function (idx) {
+        ali[i].onclick=function () {
+            alert(idx)
+
+        }
+    })(i);
+}
+//点击按钮，2秒后弹出haha
+    var oBtn = document.getElementById('btn');
+    oBtn.onclick = function () {
+        var str = 'haha';
+        setTimeout(function () {
+            alert(str);
+        },2000);
+    }
+</script>
+
+
+</body>
+</html>
