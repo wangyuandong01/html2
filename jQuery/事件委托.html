@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">click me</button>
+<ul id="ta">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<script>
+  var oTa=document.getElementById("ta");
+  var oLi=document.getElementsByTagName("li");
+  oTa.onclick=function (e) {
+      var target=e.target || window.event.srcElement;//获取事件源
+      console.log(target.innerHTML);
+  }
+    var oBtn=document.getElementById("btn");
+    oBtn.onclick=function () {
+        var oLi=document.createElement("li");
+        oLi.innerHTML=Math.random();
+        oTa.appendChild(oLi);
+    }
+</script>
+//事件冒泡解决两种问题
+//1.当要绑定多个同一个元素时，先绑定父元素，通过父元素进行操作
+//2.对于后插入元素的绑定问题，做法同1
+
+</body>
+</html>

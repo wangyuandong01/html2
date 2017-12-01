@@ -3,8 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        input[type='submit']{
+
+        }
+    </style>
 </head>
 <body>
+<div id="div1" class="aa">
+  <p>aaa
+     <p>bbb</p>
+  </p>
 
+</div>
+<div class="aa" id="div2">2</div>
+<ul id="ull">
+    <li id="li1">001</li>
+    <li id="li2">002</li>
+    <li class="aa">003</li>
+    <li>004</li>
+</ul>
+<form action="user">
+    用户名：<input type="text" name="username" value="张三">;<br>
+    电话：<input type="text" name="tel" value="12345678"><br>
+    <input type="hidden" name="userid" value="1">
+    <input type="submit" value="提交更新">
+</form>
+<script src="jquery-1.11.2.js"></script>
+<script>
+    $(function(){
+        $('.aa').css('background','red');
+        $('#ull li:first-child').css("background",'red');
+    })
+
+</script>
 </body>
 </html>

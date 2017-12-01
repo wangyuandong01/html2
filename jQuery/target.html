@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="nav">
+    <li><a href="#div1">1</a></li>
+    <li><a href="#div2">2</a></li>
+    <li><a href="#div3">3</a></li>
+</ul>
+<div id="div1">模块1</div>
+<div id="div2">模块2</div>
+<div id="div3">模块3</div>
+<script src="jquery-1.11.2.js"></script>
+<script>
+    $(function () {
+        $("#nav li:last").on("click",function () {
+            $("div3:target").css("background","#ccc");
+        });
+    });
+</script>
+</body>
+</html>

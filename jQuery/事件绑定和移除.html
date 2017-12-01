@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function addEvent(elem,type,handler) {
+        if (elem.addEventListener){
+            elem.addEventListener(type,handler)
+        }else if (elem.attachEvent){
+            elem[type+handler]=function () {
+                handler.call(elem)
+            }
+            elem.attachEvent("on"+type,elem[type+handler])
+        }else {
+            elem["on"+type]=handler;//elem.onclick=function(){}
+        }
+    }
+    //移除
+    function removeEvent(elem,type,handler) {
+        if (elem.removeEvent){
+          elem.removeEvent(type,handler);
+        }else if(elem.detach){
+            elem.detach("on"+type,elem[type+handler]);
+        }else {
+            elem["on"+type]=null;
+        }
+    }
+</script>
+</body>
+</html>
